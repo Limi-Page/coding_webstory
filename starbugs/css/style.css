@@ -1,0 +1,943 @@
+@charset "utf-8";
+@import url("./reset.css");
+@import url("./slick.css");
+
+
+/* 공통 */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    height: inherit;
+    
+}
+
+
+/* 레이아웃 */
+#wrap {
+    width: 100%;
+}
+
+#header {
+    width: 100%;
+    background: #eee;
+    height: 350px;
+    background: url(../img/top_1.png) 50% 50%;
+}
+
+#contents {
+    width: 100%;
+    background: #f3f3f3;
+}
+
+#footer {
+    width: 100%;
+    background: #252525;
+}
+
+
+/* 컨테츠레이아웃 */
+#nav {
+    background: #F0FAF6;
+    display: none;
+}
+
+#nav_tit {
+    background: #f1f1f1;
+}
+
+#bann {
+    background: #fbfcfd;
+}
+
+
+
+
+/* header */
+.header > .h_menu {
+    text-align: right;
+}
+
+.header > .h_menu > a {
+    color: white;
+    padding: 22px 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.header > .h_menu > a:hover {
+    color: #c3e26a;
+    text-decoration: underline;
+}
+
+/* hover은 마우스를 가져다 댔을때 */
+
+.header > .h_tit {
+    text-align: center;
+}
+
+.header > .h_tit > h1 {
+    font-weight: 700;
+    font-size: 32px;
+    background: #0000008c;
+    display: inline-block;
+    padding: 19px 20px;
+    margin: 37px 5px 0px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.header > .h_tit > a {
+    font-size: 25px;
+    background: #000000;
+    display: inline-block;
+    padding: 20px 20px;
+    margin: -15px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.header > .h_icon {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.header > .h_icon > a {
+    width: 60px;
+    height: 60px;
+    background: url(../img/icons/icon.png);
+    display: inline-block;
+    margin: 30px 10px;
+}
+
+.header > .h_icon > a.icon1 {
+    background-position: 0 0px;
+}
+
+.header > .h_icon > a.icon2 {
+    background-position: 0 -60px;
+}
+
+.header > .h_icon > a.icon3 {
+    background-position: 0 -120px;
+}
+
+.header > .h_icon > a.icon4 {
+    background-position: 0 -180px;
+}
+
+.header > .h_icon > a.icon1:hover {
+    background-position: -60px 0;
+}
+
+.header > .h_icon > a.icon2:hover {
+    background-position: -60px -60px;
+}
+
+.header > .h_icon > a.icon3:hover {
+    background-position: -60px -120px;
+}
+
+.header > .h_icon > a.icon4:hover {
+    background-position: -60px -180px;
+}
+
+/* 전체메뉴 */
+.nav {
+    overflow: hidden;
+    padding: 30px 0;
+}
+
+.nav > div {
+    float: left;
+    width: 40%;
+}
+
+.nav > div:last-child {
+    width: 20%;
+}
+
+/* 동일 .nav > div:nth-child(3)/ 익스플로러 9이상부터 사용가능 */
+.nav > div.last > ol > li {
+    width: 100%;
+}
+
+.nav > div > h3 {
+    font-size: 25px;
+    color: #004736;
+    margin-bottom: 10px;
+}
+
+.nav > div > ol {
+    margin: 10px 0;
+}
+
+.nav > div > ol > li {
+    float: left;
+    width: 50%;
+}
+
+.nav > div > ol > li > a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #151136;
+    line-height: 25px;
+}
+
+.nav > div > ol > li > a:hover {
+    text-decoration: underline;
+    color: #91C828;
+}
+
+/* 전체메뉴 타이틀 */
+.tit {
+    position: relative;
+}
+
+.tit > h2 {
+    font-size: 40px;
+    padding: 22px 0;
+    text-align: center;
+    font-family: 'Permanent Marker';
+    color: #1b966d;
+}
+
+.tit > .btn {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: url(../img/icons/icon.png) no-repeat 0 -600px;
+}
+
+.tit > a.btn:hover {
+    background-position: -60px -600px;
+}
+
+.tit > a.btn.on {
+    background-position: 0px -600px;
+}
+
+/*슬릭배너*/
+.bann {
+    position: relative;
+    padding: 30px 0;
+}
+
+
+.bann .slick-prev {
+    position: absolute;
+    left: -90px;
+    top: 74px;
+    width: 43px;
+    height: 43px;
+    background: url(../img/icons/icon.png) no-repeat -150px 0;
+    text-indent: -9999px;
+}
+.bann .slick-prev:hover {
+    background-position: -193px 0;
+    }
+
+.bann .slick-next {
+    position: absolute;
+    right: -90px;
+    top: 74px;
+    width: 43px;
+    height: 43px;
+    background: url(../img/icons/icon.png) no-repeat -150px -43px;
+    text-indent: -9999px;
+}
+
+.bann .slick-next:hover {
+    background-position: -193px -43px;
+}
+
+.bann div img {
+    border: 5px solid #024c1a;
+    width: 95%;
+
+}
+.bann div img:hover {
+    border-color: #c3cc1f; 
+    border-radius: 20px 0 20px 0;
+    }
+
+.bann .slick-dots {
+    position: absolute; 
+    text-align: center; 
+    width: 100%;
+    display: block;
+}
+
+.bann .slick-dots li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+   
+  
+}
+.bann .slick-dots li button {
+    font-size: 0;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    background: #C3CC1F
+}
+/* 중앙배너 
+
+.bann                {position: relative; padding: 30px 0;}
+.bann > a.prev       {position: absolute; left: -80px;top: 75px;width: 43px;height: 43px;background: url(../img/icons/icon.png) no-repeat -150px 0;}
+.bann > a.prev:hover {background-position: -193px 0;}
+
+.bann > a.next       {position: absolute; right: -80px; top: 75px; width: 43px; height: 43px; background: url(../img/icons/icon.png) no-repeat -150px -43px;}
+.bann > a.next:hover {background-position: -193px -43px;}
+
+
+.bann > ul {overflow: hidden;}
+.bann > ul > li {float: left; width: 390px; }
+.bann > ul > li:last-child {text-align: right;}
+.bann > ul > li:nth-child(2) {text-align: center;}
+.bann > ul > li.bann_01 {text-align: left; padding-right: 15px;}
+.bann > ul > li.bann_02 {text-align: center; padding-right: 15px;}
+.bann > ul > li.bann_03 {text-align: right;}
+.bann > ul > li > a > img {border: 5px solid #024c1a;}
+.bann > ul > li > a > img:hover {border: 5px solid #c3cc1f; border-radius: 20px 0 20px 0;}
+*/
+
+
+/* 게시판 컨텐츠 */
+.cont {
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+.cont a {
+    font-size: 15px;
+    line-height: 24px;
+    text-decoration: none;
+    color: gray;
+}
+
+/*게시판 전체 링크 공통부분  */
+.cont a:hover {
+    color: #91C828;
+    text-decoration: none;
+}
+
+.cont h4 {
+    font-size: 20px;
+    color: #004736;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+/*게시판 전체 타이틀 공통부분  */
+
+
+
+.column {
+    position: relative;
+    float: left;
+    width: 370px;
+    height: 470px;
+    margin: 0 45px 30px 0;
+}
+
+.cont .col3 {
+    margin-right: 0;
+}
+
+.cont .col6 {
+    margin-right: 0;
+}
+
+.cont .column .icon_img {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background: url(../img/icons/icon.png) no-repeat;
+    left: 0;
+    top: 0;
+}
+
+.cont .column .icon_tit {
+    padding-left: 70px;
+    font-size: 30px;
+    color: #151136;
+}
+
+.cont .column .icon_desc {
+    padding-left: 70px;
+    font-size: 15px;
+    color: #a7a4a4;
+    height: 30px;
+    padding-top: 7px;
+    border-bottom: 0.1px solid;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.cont .col1 .icon_img {
+    background-position: 0 -240px;
+}
+
+.cont .col2 .icon_img {
+    background-position: 0 -300px;
+}
+
+.cont .col3 .icon_img {
+    background-position: 0 -360px;
+}
+
+.cont .col4 .icon_img {
+    background-position: 0 -420px;
+}
+
+.cont .col5 .icon_img {
+    background-position: 0 -480px;
+}
+
+.cont .col6 .icon_img {
+    background-position: 0 -540px;
+}
+
+.cont .col1 .icon_img:hover {
+    background-position: -60px -240px;
+}
+
+.cont .col2 .icon_img:hover {
+    background-position: -60px -300px;
+}
+
+.cont .col3 .icon_img:hover {
+    background-position: -60px -360px;
+}
+
+.cont .col4 .icon_img:hover {
+    background-position: -60px -420px;
+}
+
+.cont .col5 .icon_img:hover {
+    background-position: -60px -480px;
+}
+
+.cont .col6 .icon_img:hover {
+    background-position: -60px -540px;
+}
+
+
+/* Notice 게시판 */
+.notice {
+    position: relative;
+}
+
+.notice ul li {
+    background: url(../img/icons/dot.png) no-repeat 0 12px;
+    padding: 0 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*넘어가는 부분을 overflow 히든으로 하더라도 줄바뀜은 그대로 유지됨 /   공식처럼 overflow: hidden과 white-space: nowrwap;을 같이쓴다.
+                whhite-space:nowrap은 공백이나 줄바꿈을 있는 그대로 표시 / text-overlow:dlipsis는 넘어가는 부분을 어떻게 처리할지에 대한 속성값 : ...  */
+
+.notice a.more {
+    background: url(../img/icons/icon.png) no-repeat -150px -90px;
+    width: 17px;
+    height: 17px;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+/* News 게시판 */
+.news {
+    position: relative;
+}
+
+.news li {
+    position: relative;
+    padding: 15px 0 15px 80px;
+}
+
+.news li a img {
+    width: 70px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.news li a strong {
+    display: block;
+    font-size: 18px;
+    color: black;
+}
+
+.news li a span {
+    display: block;
+    font-size: 14px;
+    color: gray;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.news a.more {
+    background: url(../img/icons/icon.png) no-repeat -150px -90px;
+    width: 17px;
+    height: 17px;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+
+/*  login*/
+#log_form {
+    background: rgb(1, 2, 3, 0.09);
+    padding: 15px;
+}
+
+.login_h {
+    overflow: hidden;
+    height: 30px;
+    font-size: 13px;
+}
+
+.login_h .log_check {
+    float: left;
+    padding-right: 10px;
+}
+
+.login_h .log_check .in_ch {
+    vertical-align: -2px;
+}
+
+.login_h .log_ip {
+    float: left;
+    padding-top: 3px;
+}
+
+.login_h .log_ip span {
+    color: #ff0000;
+    font-weight: 700;
+}
+
+.login_cont {
+    position: relative;
+}
+
+.login_cont .in_text {
+    width: 200px;
+    height: 20px;
+    border: 1px solid;
+    padding: 3px 5px;
+    margin-bottom: 5px;
+}
+
+.login_cont .log_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 60px;
+    color: white;
+    border: solid 1px;
+    background-color: #006633;
+    font-size: 14px;
+}
+
+
+/* ad 팝업  */
+.pop {
+    margin-top: 20px;
+}
+
+.pop ul {
+    overflow: hidden;
+}
+
+.pop ul li {
+    float: left;
+    width: 120px;
+    margin-right: 5px;
+}
+
+.pop ul li img {
+    width: 100%;
+}
+
+.pop ul li:last-child {
+    margin-right: 0;
+}
+
+
+/* 이미지마우스 오버1 */
+.m_hover1 ul {
+    overflow: hidden;
+}
+
+.m_hover1 li {
+    float: left;
+    width: 120px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.m_hover1 li:last-child {
+    margin-right: 0;
+}
+
+.m_hover1 img {
+    width: 100%
+}
+
+
+.m_hover1 li span {
+    display: block;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+}
+
+.m_hover1 li span em {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgb(1, 2, 3, 0.48);
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.m_hover1 li span:hover em {
+    visibility: visible
+}
+
+.m_hover1 li strong {
+    padding-top: 5px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+/* 이미지 마우스오버 2 */
+.m_hover2 {
+    margin-top: 15px;
+}
+
+.m_hover2 ul {
+    overflow: hidden;
+}
+
+.m_hover2 li {
+    float: left;
+    width: 120px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.m_hover2 li:last-child {
+    margin-right: 0;
+}
+
+.m_hover2 img {
+    width: 100%
+}
+
+
+.m_hover2 li span {
+    display: block;
+    position: relative;
+    width: 120px;
+    height: 120px
+}
+
+.m_hover2 li span em {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgb(1, 2, 3, 0.6);
+    width: 100%;
+    color: white;
+}
+
+.m_hover2 li span:hover em {
+    visibility: visible
+}
+
+.m_hover2 li strong {
+    padding-top: 5px;
+    font-size: 13px;
+    display: inline-block;
+}
+
+
+
+/* Tap_Menu */
+.tab_menu {
+    position: relative;
+    border: 1px solid #d8d8d8;
+    padding: 10px;
+    height: 150px;
+}
+
+.tab_menu ul {
+    overflow: hidden;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.tab_menu ul li {
+    float: left;
+    border: 1px solid #d8d8d8;
+    margin-right: -1px;
+    margin-bottom: -1px;
+}
+
+.tab_menu ul li a {
+    padding: 5px 8px;
+    display: block;
+}
+
+.tab_menu ul li ul {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    border: 0;
+    width: 350px;
+    margin-top: 10px;
+}
+
+.tab_menu ul li ul li {
+    float: none;
+    border: 0px;
+    background: url(../img/icons/dot.png) no-repeat 14px 10px;
+    padding-left: 20px;
+}
+
+.tab_menu ul li ul li a {
+    overflow: hidden;
+    padding: 0 0 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tab_menu ul li.active {
+    background: #006241;
+}
+
+.tab_menu ul li.active > a {
+    color: white;
+}
+
+
+/* 최근 게시물*/
+.new_notice {
+    position: relative;
+    border: 1px solid rgb(216, 216, 216);
+}
+
+.new_notice h4 {
+    font-size: 16px;
+    color: #ae8602;
+    font-weight: 700;
+    border-bottom: 1px solid rgb(216, 216, 216);
+    padding: 10px 0px 10px 12px;
+}
+
+.new_notice h4 em {
+    color: #0e81ec;
+}
+
+.new_notice ul {
+    padding: 10px;
+}
+
+.new_notice ul li {
+    overflow: hidden;
+    background: url(../img/icons/dot.png)no-repeat 4px 10px;
+    padding-left: 12px;
+}
+
+.new_notice ul li a {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 70%;
+    float: left;
+    ;
+}
+
+.new_notice ul li span {
+    float: right;
+    width: 25%;
+    font-size: 14px;
+    text-align: right;
+    padding-top: 6px;
+    padding-right: 10px;
+}
+
+.new_notice a.more {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    font-size: 13px;
+}
+
+
+
+/* 포트폴리오 */
+
+.port {
+    position: relative;
+    border: 1px solid #006633;
+    height: 345px;
+    overflow: hidden;
+}
+
+.port h4 {
+    border-bottom: 1px solid #006633;
+    padding: 25px 10px;
+}
+
+/*슬릭 포트폴리오*/
+.port_bnt {
+    position: absolute;
+    top: 27px;
+    right: 27px;
+}
+
+
+.port_bnt button{
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url(../img/icons/icon.png) no-repeat;
+}
+
+.port_bnt .p_icon1 {
+    background-position: -150px -120px;
+}
+
+.port_bnt .p_icon2 {
+    background-position: -150px -143px;
+}
+
+.port_bnt .p_icon3 {
+    background-position: -150px -166px;
+}
+
+.port_bnt .p_icon4 {
+    background-position: -150px -189px;
+}
+
+.port_bnt .p_icon1:hover {
+    background-position: -173px -120px;
+}
+
+.port_bnt .p_icon2:hover {
+    background-position: -173px -143px;
+}
+
+.port_bnt .p_icon3:hover {
+    background-position: -173px -166px;
+}
+
+.port_bnt .p_icon4:hover {
+    background-position: -173px -189px;
+}
+
+
+
+.port .port_img img {
+    width: 100%;
+}
+/* footer */
+.footer {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer ul {}
+
+.footer li {
+    position: relative;
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.footer li:last-child {
+    padding-right: 0;
+}
+
+.footer li a {
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+}
+
+.footer li:first-child a {
+    color: rgb(4, 165, 39);
+    font-weight: 600;
+}
+
+
+.footer li:before {
+    content: "";
+    width: 1px;
+    height: 10px;
+    background: white;
+    position: absolute;
+    left: -11px;
+    top: 4px;
+}
+
+.footer li:first-child:before {
+    width: 0;
+    height: 0;
+}
+
+.footer address {
+    margin-top: 15px;
+    color: rgb(143, 143, 143);
+    font-size: 13px;
+}
+
+.footer address em {
+    font-weight: 700;
+    color: rgb(220 202 201);
+}
+
+/*레이어팝업*/
+#layer {
+    display: none;
+    left: 100px;
+    top: 100px;
+    width: 700px;
+    position: fixed;
+    border: 10px solid #096825;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+}
+#layer img {
+    width: 100%;
+    display: block;
+}
+#layer .close {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    background: #006633;
+    padding: 5px; 
+    color:#fff;
+}
+#layer .close:hover{
+    text-decoration: underline;
+}
+
